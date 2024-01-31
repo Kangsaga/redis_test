@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: "build",
-  // output: "export",
+  output: "export",
   exportTrailingSlash: "true",
   images: {
     loader: "imgix",
