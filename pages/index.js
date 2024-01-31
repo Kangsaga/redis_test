@@ -9,7 +9,7 @@ import { addressManager } from "@/utils/adressManager";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home(props) {
+function Home(props) {
   const [name, setName] = useState("");
 
   const { clientIp } = props;
@@ -45,3 +45,5 @@ export const getServerSideProps = async ({ req }) => {
     },
   };
 };
+
+export default Home;
