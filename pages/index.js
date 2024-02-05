@@ -16,7 +16,7 @@ function Home(props) {
   const onClick = async () => {
     const result = await axios.get("/api/hello");
     console.log(result.data);
-    axios.post("api/redisGet", { key: 1, value: null });
+    axios.post("api/redisGet", { key: 1, value: 1 });
 
     setName(result.data.name);
   };
