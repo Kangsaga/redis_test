@@ -9,7 +9,8 @@ export const addressManager = {
   },
   // getAddressFromServer는 getServerSideProps에서 사용됩니다.
   getAddressFromServer: (req) => {
-    const forwarded = req.headers["x-forwarded-for"];
+    // console.log(req);
+    const forwarded = req.rawHeaders["x-forwarded-for"];
     const ip =
       typeof forwarded === "string"
         ? forwarded.split(/, /)[0]

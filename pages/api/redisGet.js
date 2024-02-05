@@ -1,4 +1,4 @@
-import { redisConnect } from "/Users/atadron/Desktop/redis_test/utils/redis.js";
+import { redisConnect } from "../../utils/redis.js";
 
 export default async function handler(req, res) {
   let data;

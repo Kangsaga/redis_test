@@ -12,17 +12,16 @@ const inter = Inter({ subsets: ["latin"] });
 function Home(props) {
   const [name, setName] = useState("");
 
-  const { clientIp } = props;
-
+  console.log("props", props);
   const onClick = async () => {
     const result = await axios.get("/api/hello");
     console.log(result.data);
-    axios.post("api/redisGet", { key: 1, value: clientIp });
+    axios.post("api/redisGet", { key: 1, value: null });
 
     setName(result.data.name);
   };
 
-  console.log("clientIp", clientIp);
+  // console.log("clientIp", clientIp);
   return (
     <>
       <h1>heollo</h1>
